@@ -1,8 +1,8 @@
 # Budget Tracker API
 
-A comprehensive REST API for personal budget management built with Spring Boot 3, Java 17, and PostgreSQL. This project demonstrates modern backend development practices including Domain-Driven Design, Bean Validation, OpenAPI documentation, and comprehensive testing with JUnit 5 and Testcontainers.
+REST API for managing personal budgets, built with Spring Boot 3, Java 17, and PostgreSQL.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [User Stories](#user-stories)
 - [Data Model](#data-model)
@@ -13,7 +13,7 @@ A comprehensive REST API for personal budget management built with Spring Boot 3
 - [Testing](#testing)
 - [Project Structure](#project-structure)
 
-## 🎯 User Stories
+## User Stories
 
 ### MVP (Core Features)
 
@@ -52,7 +52,7 @@ A comprehensive REST API for personal budget management built with Spring Boot 3
 - Interaktive API-Dokumentation mit Swagger UI
 - Request/Response-Beispiele für alle Endpoints
 
-## 📊 Data Model
+## Data Model
 
 ### Entity Relationship Diagram
 
@@ -79,7 +79,7 @@ A comprehensive REST API for personal budget management built with Spring Boot 3
 - **Transaction**: Date cannot be in the future (@PastOrPresent)
 - **Cascade**: Deleting a Budget deletes all associated Categories and Transactions
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Java**: 17
 - **Spring Boot**: 3.2.2
@@ -91,19 +91,19 @@ A comprehensive REST API for personal budget management built with Spring Boot 3
 - **Testing**: JUnit 5, Mockito, MockMvc, H2
 - **Containerization**: Docker, Docker Compose
 
-## ✨ Features
+## Features
 
-- ✅ RESTful API with HATEOAS principles
-- ✅ Comprehensive input validation with detailed error messages
-- ✅ Global exception handling (RFC 7807 Problem Details)
-- ✅ Database versioning with Flyway migrations
-- ✅ Interactive API documentation (Swagger UI)
-- ✅ Unit and integration tests
-- ✅ Docker Compose for easy setup
-- ✅ Optimistic locking (@Version)
-- ✅ Audit fields (createdAt, updatedAt)
+- RESTful API
+- Input validation with detailed error messages
+- Global exception handling (RFC 7807 Problem Details)
+- Database versioning with Flyway migrations
+- Interactive API documentation (Swagger UI)
+- Unit and integration tests
+- Docker Compose for easy setup
+- Optimistic locking (@Version)
+- Audit fields (createdAt, updatedAt)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -150,7 +150,7 @@ mvn spring-boot:run
 mvn test
 ```
 
-## 📚 API Documentation
+## API Documentation
 
 ### Base URL
 ```
@@ -370,7 +370,7 @@ The API uses RFC 7807 Problem Details for error responses:
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Run All Tests
 ```bash
@@ -391,7 +391,7 @@ The project includes:
 - **Validation Tests**: Testing Bean Validation constraints
 - **Error Handling Tests**: Testing exception scenarios and Problem Details responses
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -443,7 +443,7 @@ src/
         └── application-test.yml
 ```
 
-## 🔒 Validation Rules
+## Validation Rules
 
 ### Budget
 - `name`: required, 3-100 characters
@@ -464,40 +464,10 @@ src/
 - `categoryId`: required, must reference existing category
 - `notes`: optional, max 1000 characters
 
-## 🎨 Design Patterns & Best Practices
+## License
 
-- **Layered Architecture**: Clear separation between Controller, Service, Repository
-- **DTO Pattern**: Separate request/response objects from entities
-- **Repository Pattern**: Spring Data JPA repositories
-- **Exception Handling**: Global exception handler with RFC 7807
-- **Validation**: Declarative validation with Bean Validation
-- **Optimistic Locking**: @Version for concurrent updates
-- **Auditing**: Automatic createdAt/updatedAt timestamps
-- **Builder Pattern**: Lombok @Builder for clean object creation
+MIT License
 
-## 🔮 Future Enhancements
+## Author
 
-- [ ] JWT Authentication & Authorization
-- [ ] User management with multi-tenancy
-- [ ] Budget templates and recurring transactions
-- [ ] Export to CSV/PDF
-- [ ] Budget analytics and charts
-- [ ] Email notifications for budget limits
-- [ ] Mobile app integration
-- [ ] GraphQL API
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-Created as a portfolio project for Wirtschaftsinformatik (Business Informatics).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
----
-
-**Happy Budgeting! 💰📊**
+Portfolio project for Wirtschaftsinformatik (Business Informatics).
