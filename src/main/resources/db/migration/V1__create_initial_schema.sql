@@ -3,12 +3,12 @@ CREATE TABLE budgets (
     id BIGSERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description VARCHAR(500),
-    year INTEGER NOT NULL,
-    month INTEGER NOT NULL,
+    budget_year INTEGER NOT NULL,
+    budget_month INTEGER NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     version BIGINT NOT NULL DEFAULT 0,
-    CONSTRAINT uk_budget_year_month UNIQUE (year, month)
+    CONSTRAINT uk_budget_year_month UNIQUE (budget_year, budget_month)
 );
 
 -- Create categories table
@@ -42,4 +42,4 @@ CREATE TABLE transactions (
 CREATE INDEX idx_categories_budget_id ON categories(budget_id);
 CREATE INDEX idx_transactions_category_id ON transactions(category_id);
 CREATE INDEX idx_transactions_date ON transactions(transaction_date);
-CREATE INDEX idx_budgets_year_month ON budgets(year, month);
+CREATE INDEX idx_budgets_year_month ON budgets(budget_year, budget_month);
