@@ -1,7 +1,6 @@
 package com.budgettracker.api.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import org.springframework.context.annotation.Bean;
@@ -17,9 +16,6 @@ public class OpenApiConfig {
                         .title("Budget Tracker API")
                         .description("REST API for managing personal budgets, categories, and transactions")
                         .version("1.0.0")
-                        .contact(new Contact()
-                                .name("Budget Tracker Team")
-                                .email("info@budgettracker.com"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")));
