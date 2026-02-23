@@ -12,6 +12,7 @@ REST API for managing personal budgets, built with Spring Boot 3, Java 17, and P
 - [API Documentation](#api-documentation)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
+- [Contributing](#contributing)
 
 ## User Stories
 
@@ -467,6 +468,10 @@ src/
 ## License
 
 MIT License
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for information on how to contribute and how to manage GitHub Copilot access for this repository.
 
 ## Author
 
